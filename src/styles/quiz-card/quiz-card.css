@@ -1,0 +1,22 @@
+.quiz-card {
+  border: 1px solid var(--color-primary);
+  width: 80%;
+}
+.quiz-card__heading {
+  color: var(--color-primary);
+}
+.quiz-card__question {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.quiz-card__btn {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+}
+.quiz-card__tags {
+  list-style: none;
+}
+.quiz-card__tag {
+  border: 1px solid var(--color-primary);
+  width: fit-content;
+}
