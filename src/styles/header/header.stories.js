@@ -1,4 +1,4 @@
-import StaticHTML from './app-header.html'
+import StaticHTML from './header.html'
 
 export default {
   title: 'app-header',

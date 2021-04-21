@@ -1,0 +1,16 @@
+.header__profile {
+  width: auto;
+  height: 50px;
+  background: var(--color-white);
+  border-radius: 16px;
+  margin-right: 16px;
+}
+
+.header__dots {
+  float: right;
+  margin-left: auto;
+  font-size: calc(var(--font-size-base) * 1.5);
+  letter-spacing: 5px;
+  font-weight: 600;
+  transform: translateY(-20%);
+}
