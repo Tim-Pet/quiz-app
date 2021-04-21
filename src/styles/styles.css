@@ -2,6 +2,6 @@
 @import './_variables.css';
 @import './_base.css';
 @import './_utility.css';
-@import './header/header.css';
+@import './main-header/main-header.css';
 @import './quiz-card/quiz-card.css';
 @import './footer/footer.css';
