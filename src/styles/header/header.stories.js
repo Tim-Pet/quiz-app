@@ -1,7 +1,7 @@
 import StaticHTML from './header.html'
 
 export default {
-  title: 'app-header',
+  title: 'header',
 }
 
 export const HTML = () => StaticHTML
