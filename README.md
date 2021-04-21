@@ -1,8 +1,11 @@
-# Quiz App Template
+# Quiz-App
 
-## Template usage
+This is a quiz-app which can be used to create & answer questions.
+It is part of my studies during Neue Fische.
 
-_Don't forget to update the author (and more) in the package.json_
+# Figma design showcase
+
+<img src="./src/assets/showcase/main-page.png" width="500" />
 
 ## Installation
 
