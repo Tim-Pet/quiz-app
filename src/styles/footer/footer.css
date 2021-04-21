@@ -1,3 +1,37 @@
-h6 {
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(30px);
+}
+
+.footer__container {
+  position: relative;
+}
+
+.footer__icon {
   color: black;
+}
+
+.footer__icon:active {
+  color: antiquewhite;
+}
+
+.footer__btn {
+  position: absolute;
+  top: -35px;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  background-image: var(--gradient-secondary);
+  padding: 0;
+}
+
+.footer__btn-text {
+  height: 15px;
+  line-height: 0;
+  font-size: calc(var(--font-size-base) * 5);
+  color: var(--color-white);
 }
