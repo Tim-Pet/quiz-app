@@ -14,26 +14,32 @@
   margin-left: 16px;
   margin-right: 16px;
 }
+
 .mx-3 {
   margin-left: 24px;
   margin-right: 24px;
 }
+
 .mx-4 {
   margin-left: 32px;
   margin-right: 32px;
 }
+
 .my-1 {
   margin-top: 8px;
   margin-left: 8px;
 }
+
 .my-2 {
   margin-top: 16px;
   margin-left: 16px;
 }
+
 .my-3 {
   margin-top: 24px;
   margin-left: 24px;
 }
+
 .my-4 {
   margin-top: 32px;
   margin-left: 32px;
@@ -94,6 +100,7 @@
 .flex-around {
   justify-content: space-around;
 }
+
 .flex-between {
   justify-content: space-between;
 }
