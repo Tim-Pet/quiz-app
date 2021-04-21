@@ -14,8 +14,8 @@ body {
 }
 
 h1 {
-  font-weight: 600;
-  font-size: calc(var(--font-size-base) * 2);
+  font-weight: 300;
+  font-size: calc(var(--font-size-base) * 1.75);
 }
 
 h2 {
@@ -40,4 +40,8 @@ button {
   font-size: calc(var(--font-size-base) * 1.125);
   font-weight: 300;
   letter-spacing: 2px;
+}
+
+strong {
+  font-weight: 500;
 }

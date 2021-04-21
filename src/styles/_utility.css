@@ -198,16 +198,26 @@
   display: flex;
 }
 
-.flex-center {
+.flex-justify-center {
   justify-content: center;
 }
 
-.flex-around {
+.flex-justify-around {
   justify-content: space-around;
 }
 
-.flex-between {
+.flex-justify-between {
   justify-content: space-between;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-around {
+  align-items: space-around;
+}
+.flex-align-between {
+  align-items: space-between;
 }
 
 .flex-wrap {
