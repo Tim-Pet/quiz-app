@@ -10,7 +10,13 @@
 }
 
 .footer__icon {
-  color: black;
+  height: 50px;
+}
+
+.footer__icon:hover {
+  stroke: red;
+  stroke-width: 1px;
+  fill: aqua;
 }
 
 .footer__icon:active {
