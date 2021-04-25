@@ -3,9 +3,9 @@
 This is a quiz-app which can be used to create & answer questions.
 It is part of my studies during Neue Fische.
 
-# Figma design showcase
+## Figma design showcase
 
-<img src="./src/assets/showcase/main-page.png" width="500" />
+<img src="./src/assets/showcase/figma-design.png" width="1000" />
 
 ## Installation
 
