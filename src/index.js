@@ -2,65 +2,65 @@
 const pageMain = document.querySelector('.page-main')
 const pageProfile = document.querySelector('.page-profile')
 const pageFav = document.querySelector('.page-fav')
-// const pageCreate = document.querySelector('.page-create')
+const pageCreate = document.querySelector('.page-create')
 const pagesAll = document.querySelectorAll('.page')
 
 const headerMain = document.querySelector('.header-main')
 const headerProfile = document.querySelector('.header-profile')
-// const headerCreate = document.querySelector('.header-create')
+const headerCreate = document.querySelector('.header-create')
 const headerAll = document.querySelectorAll('.header')
 
-const btnMain = document.querySelector('.btn__main')
-const btnFav = document.querySelector('.btn__favorite')
 const btnProfile = document.querySelector('.btn__profile')
 const btnCreate = document.querySelector('.btn__create')
-const btnAll = document.querySelectorAll('.footer__nav')
 
-btnMain.addEventListener('click', () => {
-  showBox(pageMain)
+const btnNavMain = document.querySelector('.btn__main')
+const btnNavFav = document.querySelector('.btn__favorite')
+const btnNavAll = document.querySelectorAll('.footer__nav')
+
+btnNavMain.addEventListener('click', () => {
+  showPage(pageMain)
   showHeader(headerMain)
-  setActiveClass(btnMain)
+  setActiveClass(btnNavMain)
 })
 
-btnFav.addEventListener('click', () => {
-  showBox(pageFav)
+btnNavFav.addEventListener('click', () => {
+  showPage(pageFav)
   showHeader(headerMain)
-  setActiveClass(btnFav)
+  setActiveClass(btnNavFav)
 })
 
 btnProfile.addEventListener('click', () => {
-  showBox(pageProfile)
-  showHeader(headerProfile)
+  showPage(pageProfile)
   showHeader(headerProfile)
 })
 
 btnCreate.addEventListener('click', () => {
-  // For Testing until create page got created
-  toggleDarkMode()
+  showPage(pageCreate)
+  showHeader(headerCreate)
 })
 
-function showBox(el) {
-  el.classList.remove('hidden')
+function showPage(visiblePage) {
+  visiblePage.classList.remove('hidden')
   pagesAll.forEach(e => {
-    if (e !== el) {
+    if (e !== visiblePage) {
       e.classList.add('hidden')
     }
   })
 }
 
-function showHeader(el) {
-  el.classList.remove('hidden')
+function showHeader(visibleHeader) {
+  visibleHeader.classList.remove('hidden')
   headerAll.forEach(e => {
-    if (e !== el) {
+    if (e !== visibleHeader) {
       e.classList.add('hidden')
     }
   })
 }
 
-function setActiveClass(el) {
-  el.classList.add('active')
-  btnAll.forEach(e => {
-    if (e !== el && e.classList.contains('active')) {
+function setActiveClass(activeElement) {
+  activeElement.classList.add('active')
+  btnNavAll.forEach(e => {
+    if (e !== activeElement && e.classList.contains('active')) {
       e.classList.remove('active')
     }
   })
@@ -91,7 +91,13 @@ function toggleAnswer(el) {
 
 // Swap Dark/light-mode
 // More get added as styling of the app improves
-const r = document.documentElement
+const darkmodeToggler = document.querySelector('.darkmode-switch')
+const rootStyles = document.documentElement
+
+darkmodeToggler.addEventListener('click', () => {
+  toggleDarkMode()
+})
+
 function toggleDarkMode() {
-  getComputedStyle(r).getPropertyValue('--color-black') === 'white' ? r.style.setProperty('--color-black', 'black') : r.style.setProperty('--color-black', 'white')
+  getComputedStyle(rootStyles).getPropertyValue('--color-black') === 'white' ? rootStyles.style.setProperty('--color-black', 'black') : rootStyles.style.setProperty('--color-black', 'white')
 }
