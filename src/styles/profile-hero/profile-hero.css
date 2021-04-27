@@ -1,0 +1,7 @@
+.profile-hero__portrait {
+  width: auto;
+  height: 85px;
+  background: var(--color-white);
+  border-radius: 16px;
+  margin-right: 16px;
+}
