@@ -5,6 +5,7 @@
   box-sizing: border-box;
   backdrop-filter: blur(32px);
   border-radius: 32px;
+  overflow: hidden;
 }
 
 .quiz-card__bookmark {
@@ -28,4 +29,8 @@
   background: var(--color-white);
   border-radius: 8px;
   font-size: calc(var(--font-size-base));
+}
+
+.quiz-card__answer {
+  background: radial-gradient(96.67% 169.17% at 0% 0%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.06) 100%);
 }
