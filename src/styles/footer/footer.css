@@ -18,9 +18,11 @@
 
 .footer__icon {
   width: 30px;
+  height: 30px;
   justify-self: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  fill: black;
 }
 
 .footer__icon:hover {
