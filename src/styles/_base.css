@@ -36,6 +36,7 @@ input {
   font-size: calc(var(--font-size-base) * 0.875);
   line-height: 130%;
   font-weight: 300;
+  color: var(--color-primary);
 }
 
 button {
