@@ -1,10 +1,11 @@
 :root {
   --color-white: #fefefe;
   --color-primary: #333;
-  --gradient-primary: linear-gradient(180deg, #ffe1b4 0%, #e3d4f6 100%);
   --gradient-secondary: linear-gradient(135.45deg, #c0ffd5 4.68%, #afb4e8 94.69%);
   --gradient-white: radial-gradient(96.67% 169.17% at 0% 0%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0.6) 100%);
   --gradient-white-transparent: radial-gradient(96.67% 169.17% at 0% 0%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
   --gradient-transparent: radial-gradient(96.67% 169.17% at 0% 0%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.06) 100%);
   --font-size-base: 1rem;
 }
+
+/* --gradient-primary: linear-gradient(180deg, #ffe1b4 0%, #e3d4f6 100%); */
