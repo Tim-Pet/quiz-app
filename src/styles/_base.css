@@ -31,7 +31,8 @@ h3 {
 }
 
 p,
-li {
+li,
+input {
   font-size: calc(var(--font-size-base) * 0.875);
   line-height: 130%;
   font-weight: 300;
@@ -45,4 +46,13 @@ button {
 
 strong {
   font-weight: 500;
+}
+
+input,
+textarea {
+  border-radius: 16px;
+  border: none;
+  background: var(--gradient-white-transparent);
+  resize: none;
+  padding: 5px 5px;
 }

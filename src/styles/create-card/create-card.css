@@ -1,0 +1,12 @@
+.create {
+  display: flex;
+  flex-direction: column;
+}
+
+.create__input {
+  width: 100%;
+}
+
+.create__input--big {
+  height: 50px;
+}

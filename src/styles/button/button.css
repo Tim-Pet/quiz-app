@@ -3,4 +3,5 @@
   border: 0;
   border-radius: 32px;
   background-image: var(--gradient-secondary);
+  cursor: pointer;
 }
