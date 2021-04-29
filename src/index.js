@@ -18,11 +18,8 @@ const btnNavFav = document.querySelector('.btn__favorite')
 const btnNavAll = document.querySelectorAll('.footer__nav')
 
 btnNavMain.addEventListener('click', navigateToHome)
-
 btnNavFav.addEventListener('click', navigateToBookmarks)
-
 btnProfile.addEventListener('click', navigateToProfile)
-
 btnCreate.addEventListener('click', navigateToCreate)
 
 function navigateToHome() {
