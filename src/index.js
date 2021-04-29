@@ -18,35 +18,35 @@ const btnNavFav = document.querySelector('.btn__favorite')
 const btnNavAll = document.querySelectorAll('.footer__nav')
 
 btnNavMain.addEventListener('click', () => {
-  showPage(pageMain)
-  showHeader(headerMain)
+  setPage(pageMain)
+  setHeader(headerMain)
   setActiveButton(btnNavMain)
 })
 
 btnNavFav.addEventListener('click', () => {
-  showPage(pageFav)
-  showHeader(headerMain)
+  setPage(pageFav)
+  setHeader(headerMain)
   setActiveButton(btnNavFav)
 })
 
 btnProfile.addEventListener('click', () => {
-  showPage(pageProfile)
-  showHeader(headerProfile)
+  setPage(pageProfile)
+  setHeader(headerProfile)
 })
 
 btnCreate.addEventListener('click', () => {
-  showPage(pageCreate)
-  showHeader(headerCreate)
+  setPage(pageCreate)
+  setHeader(headerCreate)
 })
 
-function showPage(visiblePage) {
+function setPage(visiblePage) {
   pagesAll.forEach(e => {
     e.classList.add('hidden')
   })
   visiblePage.classList.remove('hidden')
 }
 
-function showHeader(visibleHeader) {
+function setHeader(visibleHeader) {
   headerAll.forEach(e => {
     e.classList.add('hidden')
   })
@@ -84,7 +84,6 @@ function toggleAnswer(el) {
 }
 
 // Swap Dark/light-mode
-// More get added as styling of the app improves
 const darkmodeToggler = document.querySelector('.darkmode-switch')
 const rootStyles = document.documentElement
 
