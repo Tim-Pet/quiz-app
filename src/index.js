@@ -20,13 +20,13 @@ const btnNavAll = document.querySelectorAll('.footer__nav')
 btnNavMain.addEventListener('click', () => {
   showPage(pageMain)
   showHeader(headerMain)
-  setActiveClass(btnNavMain)
+  setActiveButton(btnNavMain)
 })
 
 btnNavFav.addEventListener('click', () => {
   showPage(pageFav)
   showHeader(headerMain)
-  setActiveClass(btnNavFav)
+  setActiveButton(btnNavFav)
 })
 
 btnProfile.addEventListener('click', () => {
@@ -40,30 +40,24 @@ btnCreate.addEventListener('click', () => {
 })
 
 function showPage(visiblePage) {
-  visiblePage.classList.remove('hidden')
   pagesAll.forEach(e => {
-    if (e !== visiblePage) {
-      e.classList.add('hidden')
-    }
+    e.classList.add('hidden')
   })
+  visiblePage.classList.remove('hidden')
 }
 
 function showHeader(visibleHeader) {
-  visibleHeader.classList.remove('hidden')
   headerAll.forEach(e => {
-    if (e !== visibleHeader) {
-      e.classList.add('hidden')
-    }
+    e.classList.add('hidden')
   })
+  visibleHeader.classList.remove('hidden')
 }
 
-function setActiveClass(activeElement) {
-  activeElement.classList.add('active')
+function setActiveButton(activeElement) {
   btnNavAll.forEach(e => {
-    if (e !== activeElement && e.classList.contains('active')) {
-      e.classList.remove('active')
-    }
+    e.classList.remove('active')
   })
+  activeElement.classList.add('active')
 }
 
 // Quiz Cards
