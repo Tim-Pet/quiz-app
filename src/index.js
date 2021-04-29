@@ -17,27 +17,35 @@ const btnNavMain = document.querySelector('.btn__main')
 const btnNavFav = document.querySelector('.btn__favorite')
 const btnNavAll = document.querySelectorAll('.footer__nav')
 
-btnNavMain.addEventListener('click', () => {
+btnNavMain.addEventListener('click', navigateToHome)
+
+btnNavFav.addEventListener('click', navigateToBookmarks)
+
+btnProfile.addEventListener('click', navigateToProfile)
+
+btnCreate.addEventListener('click', navigateToCreate)
+
+function navigateToHome() {
   setPage(pageMain)
   setHeader(headerMain)
   setActiveButton(btnNavMain)
-})
+}
 
-btnNavFav.addEventListener('click', () => {
+function navigateToBookmarks() {
   setPage(pageFav)
   setHeader(headerMain)
   setActiveButton(btnNavFav)
-})
+}
 
-btnProfile.addEventListener('click', () => {
+function navigateToProfile() {
   setPage(pageProfile)
   setHeader(headerProfile)
-})
+}
 
-btnCreate.addEventListener('click', () => {
+function navigateToCreate() {
   setPage(pageCreate)
   setHeader(headerCreate)
-})
+}
 
 function setPage(visiblePage) {
   pagesAll.forEach(e => {
