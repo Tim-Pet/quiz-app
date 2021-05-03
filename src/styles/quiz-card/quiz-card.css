@@ -15,6 +15,11 @@
   width: 24px;
   height: 24px;
   fill: var(--color-primary);
+  cursor: pointer;
+}
+
+.bookmarked > div > .quiz-card__bookmark {
+  fill: #fff700;
 }
 
 .quiz-card__btn {
