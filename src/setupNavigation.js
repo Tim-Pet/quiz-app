@@ -1,21 +1,25 @@
+import getAllElements from './utils/getAllElements'
+import getElement from './utils/getElement'
+
 export default function setupNavigation() {
-  const pageMain = document.querySelector('.page-main')
-  const pageProfile = document.querySelector('.page-profile')
-  const pageFav = document.querySelector('.page-fav')
-  const pageCreate = document.querySelector('.page-create')
-  const pagesAll = document.querySelectorAll('.page')
+  const pageMain = getElement('.page-main')
+  const pageProfile = getElement('.page-profile')
+  const pageCreate = getElement('.page-create')
+  const pagesAll = getAllElements('.page')
 
-  const headerMain = document.querySelector('.header-main')
-  const headerProfile = document.querySelector('.header-profile')
-  const headerCreate = document.querySelector('.header-create')
-  const headerAll = document.querySelectorAll('.header')
+  const headerMain = getElement('.header-main')
+  const headerProfile = getElement('.header-profile')
+  const headerCreate = getElement('.header-create')
+  const headerAll = getAllElements('.header')
 
-  const btnProfile = document.querySelector('.btn__profile')
-  const btnCreate = document.querySelector('.btn__create')
+  const btnProfile = getElement('.btn__profile')
+  const btnCreate = getElement('.btn__create')
 
-  const btnNavMain = document.querySelector('.btn__main')
-  const btnNavFav = document.querySelector('.btn__favorite')
-  const btnNavAll = document.querySelectorAll('.footer__nav')
+  const btnNavMain = getElement('.btn__main')
+  const btnNavFav = getElement('.btn__favorite')
+  const btnNavAll = getAllElements('.footer__nav')
+
+  const quizCards = getAllElements('.quiz-card')
 
   btnNavMain.addEventListener('click', navigateToHome)
   btnNavFav.addEventListener('click', navigateToBookmarks)
@@ -26,12 +30,14 @@ export default function setupNavigation() {
     setPage(pageMain)
     setHeader(headerMain)
     setActiveButton(btnNavMain)
+    showAllQuizCards()
   }
 
   function navigateToBookmarks() {
-    setPage(pageFav)
+    setPage(pageMain)
     setHeader(headerMain)
     setActiveButton(btnNavFav)
+    showBookmarkedQuizCards()
   }
 
   function navigateToProfile() {
@@ -63,5 +69,18 @@ export default function setupNavigation() {
       button.classList.remove('active')
     })
     activeElement.classList.add('active')
+  }
+  function showBookmarkedQuizCards() {
+    quizCards.forEach(quizCard => {
+      if (!quizCard.classList.contains('bookmarked')) {
+        quizCard.classList.add('hidden')
+      }
+    })
+  }
+
+  function showAllQuizCards() {
+    quizCards.forEach(quizCard => {
+      quizCard.classList.remove('hidden')
+    })
   }
 }
