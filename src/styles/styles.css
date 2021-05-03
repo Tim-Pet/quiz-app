@@ -9,3 +9,7 @@
 @import './quiz-card/quiz-card.css';
 @import './footer/footer.css';
 @import './create-card/create-card.css';
+
+.active {
+  background-color: black !important;
+}

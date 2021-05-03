@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="header header-main flex px-4 py-1 flex-align-center flex-justify-between">
-      <img class="header__profile btn__profile" src="../../assets/images/profile-icon.png" alt="" />
+      <img class="header__profile btn__profile" src="../../assets/images/profile-icon.png" alt="" data-nav="profile" />
       <h1>Hello, <strong>{User}</strong></h1>
       <svg class="header__darkmode-switch darkmode-switch">
         <use xlink:href="#moon"></use>
@@ -29,7 +29,7 @@
       </svg>
     </header>
 
-    <main class="page-main page">
+    <main class="page-main page" data-page="main">
       <section class="quiz-card mx-4 my-4">
         <div class="px-3 py-3">
           <h2 class="mb-2">Question</h2>
@@ -86,7 +86,7 @@
       </section>
     </main>
 
-    <main class="page-profile page hidden">
+    <main class="page-profile page hidden" data-page="profile">
       <section class="mx-4 my-4 flex flex-align-center flex-justify-around">
         <img class="profile-hero__portrait" src="../../assets/images/profile-icon.png" alt="" />
         <h2>{User}</h2>
@@ -106,9 +106,9 @@
       </section>
     </main>
 
-    <main class="page-fav page hidden"></main>
+    <main class="page-fav page hidden" data-page="bookmark"></main>
 
-    <main class="page-create page hidden">
+    <main class="page-create page hidden" data-page="create">
       <section class="create mx-4 my-4">
         <label>
           <h2 class="mb-2">Your Question</h2>
@@ -128,13 +128,13 @@
 
     <footer class="footer">
       <div class="footer__container py-2">
-        <svg class="footer__icon btn__main footer__nav">
+        <svg class="footer__icon btn__main footer__nav" data-nav="main">
           <use xlink:href="#home"></use>
         </svg>
-        <svg class="footer__icon btn__favorite footer__nav">
+        <svg class="footer__icon btn__favorite footer__nav" data-nav="bookmark">
           <use xlink:href="#star"></use>
         </svg>
-        <div class="footer__btn btn__create flex flex-align-center flex-justify-center footer__nav"><span class="footer__btn-text">+</span></div>
+        <div class="footer__btn btn__create flex flex-align-center flex-justify-center footer__nav" data-nav="create"><span class="footer__btn-text">+</span></div>
       </div>
     </footer>
     <svg height="0">
