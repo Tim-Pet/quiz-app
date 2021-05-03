@@ -1,23 +1,23 @@
+import getAllElements from './utils/getAllElements'
+import getElement from './utils/getElement'
+
 export default function setupQuizcardAnswer() {
-  const quizBtnOne = document.querySelector('.quiz-card__btn--one')
-  const quizBtnTwo = document.querySelector('.quiz-card__btn--two')
-  const quizBtnThree = document.querySelector('.quiz-card__btn--three')
+  const quizCards = getAllElements('.quiz-card')
+  const btnTextShow = 'Show Answer'
+  const btnTextHide = 'Hide Answer'
 
-  const quizAnswerOne = document.querySelector('.quiz-card__answer--one')
-  const quizAnswerTwo = document.querySelector('.quiz-card__answer--two')
-  const quizAnswerThree = document.querySelector('.quiz-card__answer--three')
+  quizCards.forEach(quizCard => {
+    const answerBtn = getElement('.quiz-card__btn', quizCard)
+    const quizCardAnswer = getElement('.quiz-card__answer', quizCard)
 
-  quizBtnOne.addEventListener('click', () => {
-    toggleAnswer(quizAnswerOne)
-  })
-  quizBtnTwo.addEventListener('click', () => {
-    toggleAnswer(quizAnswerTwo)
-  })
-  quizBtnThree.addEventListener('click', () => {
-    toggleAnswer(quizAnswerThree)
-  })
+    answerBtn.addEventListener('click', () => {
+      quizCardAnswer.classList.toggle('hidden')
 
-  function toggleAnswer(el) {
-    el.classList.toggle('hidden')
-  }
+      if (answerBtn.innerText === btnTextShow) {
+        answerBtn.innerText = btnTextHide
+      } else {
+        answerBtn.innerText = btnTextShow
+      }
+    })
+  })
 }
