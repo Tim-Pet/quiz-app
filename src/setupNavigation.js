@@ -45,22 +45,22 @@ export default function setupNavigation() {
   }
 
   function setPage(visiblePage) {
-    pagesAll.forEach(e => {
-      e.classList.add('hidden')
+    pagesAll.forEach(page => {
+      page.classList.add('hidden')
     })
     visiblePage.classList.remove('hidden')
   }
 
   function setHeader(visibleHeader) {
-    headerAll.forEach(e => {
-      e.classList.add('hidden')
+    headerAll.forEach(header => {
+      header.classList.add('hidden')
     })
     visibleHeader.classList.remove('hidden')
   }
 
   function setActiveButton(activeElement) {
-    btnNavAll.forEach(e => {
-      e.classList.remove('active')
+    btnNavAll.forEach(button => {
+      button.classList.remove('active')
     })
     activeElement.classList.add('active')
   }
